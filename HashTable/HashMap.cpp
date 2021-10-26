@@ -6,12 +6,12 @@ void HashMap::observe(string key)
   LinkedList* pairsPtr = getLinkedList(key);
   while (pairsPtr != nullptr)
   {
-    if (pairsPtr.key() == key)
+    if (pairsPtr->key() == key)
     {
-      ++pairsPtr.value();
+      pairsPtr->setValue(pairsPtr->value() + 1);
       return;
     }
-    pairsPtr = pairsPtr.next();
+    pairsPtr = pairsPtr->next();
   }
   // key not exist, add it!
   addNode(pairsPtr, key);
@@ -22,8 +22,8 @@ unsigned int HashMap::getCount(string key)
   LinkedList* pairsPtr =  getLinkedList(key);
   while (pairsPtr != nullptr)
   {
-    if (pairsPtr.key() == key) return pairsPtr.value();
-    pairsPtr = pairsPtr.next();
+    if (pairsPtr->key() == key) return pairsPtr->value();
+    pairsPtr = pairsPtr->next();
   }
   // key not exist, return -1
   return -1;
