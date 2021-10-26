@@ -1,6 +1,6 @@
 #include "LinkedList.h"
 
-LinkedList::LinkedList(string key, unsigned int value, LinkedList* nextPtr)
+LinkedList::LinkedList(const string& key, unsigned int value, LinkedList* nextPtr)
 {
   _key = key;
   _value = value;

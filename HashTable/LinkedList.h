@@ -5,7 +5,7 @@ using namespace std;
 class LinkedList
 {
 public:
-  LinkedList(string key, unsigned int value, LinkedList* nextPtr);
+  LinkedList(const string& key, unsigned int value, LinkedList* nextPtr);
   const string& key();
   const unsigned int& value();
   LinkedList* const next();
