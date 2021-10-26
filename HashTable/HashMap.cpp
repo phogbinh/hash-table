@@ -30,8 +30,8 @@ unsigned int HashMap::getCount(string key)
     if (pairsPtr->key() == key) return pairsPtr->value();
     pairsPtr = pairsPtr->next();
   }
-  // key not exist, return -1
-  return -1;
+  // key not exist, return 0
+  return 0;
 }
 
 LinkedList*& HashMap::getLinkedList(string key)
