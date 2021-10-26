@@ -8,7 +8,7 @@ HashMap::HashMap()
 
 void HashMap::observe(string key)
 {
-  LinkedList* pairsPtr = getLinkedList(key);
+  LinkedList*& pairsPtr = getLinkedList(key);
   while (pairsPtr != nullptr)
   {
     if (pairsPtr->key() == key)
@@ -34,7 +34,7 @@ unsigned int HashMap::getCount(string key)
   return -1;
 }
 
-LinkedList* HashMap::getLinkedList(string key)
+LinkedList*& HashMap::getLinkedList(string key)
 {
   return _hashArray[getHashArrayIndex(key)];
 }
@@ -51,7 +51,7 @@ unsigned int HashMap::getHashCode(string key)
   return result;
 }
 
-void HashMap::addNode(LinkedList* pairsPtr, string key)
+void HashMap::addNode(LinkedList*& pairsPtr, string key)
 {
   pairsPtr = new LinkedList(key, 0, nullptr);
 }
