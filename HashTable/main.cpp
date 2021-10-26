@@ -7,8 +7,8 @@ int main()
   hashMap.observe("Vagina");
   hashMap.observe("Potato");
   hashMap.observe("Vagina");
-  printf("%d", hashMap.getCount("Vagina")); // 2
-  printf("%d", hashMap.getCount("Potato")); // 1
-  printf("%d", hashMap.getCount("Hello")); // 0
+  printf("%d\n", hashMap.getCount("Vagina")); // 2
+  printf("%d\n", hashMap.getCount("Potato")); // 1
+  printf("%d\n", hashMap.getCount("Hello")); // 0
   return 0;
 }
