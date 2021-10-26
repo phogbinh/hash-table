@@ -8,6 +8,7 @@ class LinkedList;
 class HashMap
 {
 public:
+  HashMap();
   void observe(string key);
   unsigned int getCount(string key);
 private:

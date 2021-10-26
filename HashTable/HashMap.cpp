@@ -1,6 +1,11 @@
 #include "HashMap.h"
 #include "LinkedList.h"
 
+HashMap::HashMap()
+{
+  for (int i = 0; i < HASH_ARRAY_LENGTH; ++i) _hashArray[i] = nullptr;
+}
+
 void HashMap::observe(string key)
 {
   LinkedList* pairsPtr = getLinkedList(key);
