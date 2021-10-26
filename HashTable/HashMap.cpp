@@ -53,5 +53,5 @@ unsigned int HashMap::getHashCode(string key)
 
 void HashMap::addNode(LinkedList*& pairsPtr, string key)
 {
-  pairsPtr = new LinkedList(key, 0, nullptr);
+  pairsPtr = new LinkedList(key, 1, nullptr);
 }
